@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './principal/principal.component';
@@ -9,6 +10,10 @@ import { CEspeciesComponent } from './c-especies/c-especies.component';
 import { CFavoritosComponent } from './c-favoritos/c-favoritos.component';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+import { EspeciesService } from './servicio/especies.service';
+import { EspecieComponent } from './especie/especie.component';
+
+
 
 const routes: Routes = [
   {path:'', component: CEspeciesComponent},
@@ -22,14 +27,16 @@ const routes: Routes = [
     HeaderComponent,
     FooterComponent,
     CEspeciesComponent,
-    CFavoritosComponent
+    CFavoritosComponent,
+    EspecieComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [EspeciesService],
   bootstrap: [PrincipalComponent]
 })
 export class AppModule { }

@@ -1,1 +1,18 @@
-<p>c-especies works!</p>
+<div class="container" style="background-color: antiquewhite;" >
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label for="usr">Nombre:</label>
+                <input type="text" [(ngModel)]="especieData.nombre" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="usr">Clasificación:</label>
+                <input type="text" [(ngModel)]="especieData.clasificacion" class="form-control">
+            </div>
+            <button type="button" (click)="eventoBtnBuscar()" class="btn btn-primary btn-blok">Buscar</button>
+            <button type="button"class="btn btn-primary btn-blok">Limpiar</button>
+        </div>
+    </div>
+</div>
+
+<app-especie></app-especie>
