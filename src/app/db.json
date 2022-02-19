@@ -1,0 +1,23 @@
+[
+    {
+    "id": 1,
+    "name": "Human",
+    "classification": "Mammal",
+    "average_height": "180", 
+    "skin_colors": "caucasian, black, asian, hispanic", 
+    "eye_colors": "brown, blue, green, hazel, grey, amber", 
+    "average_lifespan": "120", 
+    "language": "Galactic Basic"
+    },
+    {
+        "id": 2,
+        "name": "Wookiee",
+        "classification": "Mammal",
+        "average_height": "210", 
+        "skin_colors": "gray", 
+        "eye_colors": "blue, green, yellow, brown, golden, red", 
+        "average_lifespan": "400", 
+        "language": "Shyriiwook"
+    }
+    
+]

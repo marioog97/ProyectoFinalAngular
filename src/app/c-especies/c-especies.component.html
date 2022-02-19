@@ -1,4 +1,4 @@
-<div class="container" style="background-color: antiquewhite;" >
+<div class="container" style="background-color: rgb(224, 222, 222);" >
     <div class="row">
         <div class="col-6">
             <div class="form-group">
@@ -9,10 +9,12 @@
                 <label for="usr">Clasificación:</label>
                 <input type="text" [(ngModel)]="especieData.clasificacion" class="form-control">
             </div>
-            <button type="button" (click)="eventoBtnBuscar()" class="btn btn-primary btn-blok">Buscar</button>
-            <button type="button"class="btn btn-primary btn-blok">Limpiar</button>
+            <button type="button" (click)="eventoBtnBuscar()" class="btn btn-primary btn-blok my-3 mx-3">Buscar</button>
+            <button type="button"class="btn btn-primary btn-blok my-3 mx-3">Limpiar</button>
         </div>
     </div>
 </div>
 
+<div class="container mt-4">
 <app-especie></app-especie>
+</div> 

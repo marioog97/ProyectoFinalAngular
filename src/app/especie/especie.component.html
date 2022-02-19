@@ -1,6 +1,24 @@
+
 <div class="container">
     <div class="row">
-        <div class="col8">Listado de especies</div>
-        <div class="col-4">Formulario de carga de especie</div>
+        <div class="col8">
+            <table class="table table-striped">
+                <thead>
+                    <th>Raza</th> <th>Clasificación</th> <th>Altura media</th> <th>Color piel</th> <th>Color ojos</th> <th>Esperanza de vida</th> <th>Lenguaje</th> 
+                </thead>
+                <tbody>
+                    <tr *ngFor="let esp of especies">
+                    <td>{{esp.name}}</td>
+                    <td>{{esp.classification}}</td>
+                    <td>{{esp.average_height}}</td>
+                    <td>{{esp.skin_colors}}</td>
+                    <td>{{esp.eye_colors}}</td>
+                    <td>{{esp.average_lifespan}}</td>
+                    <td>{{esp.language}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        
     </div>
 </div>
