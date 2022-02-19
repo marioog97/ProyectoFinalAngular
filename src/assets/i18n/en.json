@@ -1,0 +1,13 @@
+[
+    {
+        "header": {
+            "especies": "Species",
+            "favoritos": "Favourites"
+        }
+    },
+    {
+        "principal": {
+            "descripcion": "All Star Wars species and details"
+        }
+    }
+]
