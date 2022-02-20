@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { CEspeciesComponent } from './c-especies/c-especies.component';
+
 import { CFavoritosComponent } from './c-favoritos/c-favoritos.component';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
@@ -18,8 +18,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 
 const routes: Routes = [
-  {path:'', component: CEspeciesComponent},
-  {path: 'especies', component: CEspeciesComponent},
+  {path:'', component: EspecieComponent},
+  {path: 'especies', component: EspecieComponent},
   {path: 'favoritos', component: CFavoritosComponent}
 ]
 @NgModule({
@@ -28,7 +28,6 @@ const routes: Routes = [
     PrincipalComponent,
     HeaderComponent,
     FooterComponent,
-    CEspeciesComponent,
     CFavoritosComponent,
     EspecieComponent
   ],
@@ -36,7 +35,7 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routes),
-    HttpClientModule, 
+    HttpClientModule,
     TranslateModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
@@ -45,6 +44,7 @@ const routes: Routes = [
         deps: [ HttpClient ]
       }
     })
+    
   ],
   providers: [EspeciesService],
   bootstrap: [PrincipalComponent]
