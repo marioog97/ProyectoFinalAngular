@@ -7,12 +7,18 @@
         </div>
     </div>
 
+
+
     <div class="container">
         <div class="row">
             <section id="home">
                 <div class="">
+                    <div *ngFor="let msj of msjBienvenida">
+                        <p>Bienvenid@ {{msj.nombre}} {{msj.apellido}} a</p>
+                    </div>
                     <h1 class="display-"> Star Wars Species </h1>
-                    <p class="lead" >Todas las especies de Star Wars y sus detalles</p>
+
+                    <p class="lead" [translate]="'principal.descripcion'">{{'principal.descripcion'|translate}}</p>
                 </div>
             </section>
 

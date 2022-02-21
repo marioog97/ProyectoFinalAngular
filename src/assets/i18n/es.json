@@ -1,13 +1,27 @@
-[
-    {
-        "header": {
-            "especies": "Especies",
-            "favoritos": "Favoritos"
-        }
+{
+    "header": {
+        "especies": "Especies",
+        "favoritos": "Favoritos"
     },
-    {
-        "principal": {
-            "descripcion": "Todas las especies de Star Wars y sus detalles"
-        }
+    "principal": {
+        "descripcion": "Todas las especies de Star Wars y sus detalles"
+    },
+
+    "formulario": {
+        "nombre": "Nombre:",
+        "clasificacion": "Clasificación",
+        "buscar": "Buscar",
+        "limpiar": "Limpiar"
+    },
+
+    "tabla":{
+        "raza": "Raza",
+        "clasificacion": "Clasificación",
+        "altura": "Altura media",
+        "piel": "Color piel",
+        "ojos": "Color ojos",
+        "vida": "Esperanza de vida",
+        "lenguaje": "Lenguaje"
     }
-]
+
+}

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './principal/principal.component';
@@ -18,9 +18,9 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 
 const routes: Routes = [
-  {path:'', component: EspecieComponent},
-  {path: 'especies', component: EspecieComponent},
-  {path: 'favoritos', component: CFavoritosComponent}
+  { path: '', component: EspecieComponent },
+  { path: 'especies', component: EspecieComponent },
+  { path: 'favoritos', component: CFavoritosComponent }
 ]
 @NgModule({
   declarations: [
@@ -41,15 +41,16 @@ const routes: Routes = [
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps: [ HttpClient ]
+        deps: [HttpClient]
       }
     })
-    
+
   ],
   providers: [EspeciesService],
   bootstrap: [PrincipalComponent]
 })
 export class AppModule { }
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }

@@ -8,14 +8,13 @@ import { Observable } from 'rxjs';
 export class EspeciesService {
 
   constructor(private httpClient: HttpClient) { }
-  url: string= "https://run.mocky.io/v3/d20a207b-6781-4111-811b-3ae81e98bc2c";
-
-  listarEspecies():Observable<any>{
+  url: string = "https://run.mocky.io/v3/cf6c951c-e0a8-42f8-88b9-ed421552aefe";
+  listarEspecies(): Observable<any> {
     return this.httpClient.get(this.url)
 
   }
 
-  listadoDeEspecies():any{
+  listadoDeEspecies(): any {
     return this.httpClient.get(this.url)
   }
 }

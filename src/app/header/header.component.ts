@@ -8,7 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private translate: TranslateService) { 
+  constructor(private translate: TranslateService) {
     translate.setDefaultLang('es');
     translate.use('es');
   }
@@ -16,16 +16,16 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-    //Se cambia idioma 
-    changeLangugeToSpanish():void {
-      this.translate.use('es');
-      console.log('Idioma español: ' + this.translate.instant('header.home'));
-    }
-  
-    
-    //Se cambia idioma 
-    changeLangugeToEnglish():void {
-      this.translate.use('en');
-      console.log('Idioma inglés');
-    }
+  //Se cambia idioma 
+  changeLangugeToSpanish(): void {
+    this.translate.use('es');
+    console.log('Idioma español: ' + this.translate.instant('header.especies'));
+  }
+
+
+  //Se cambia idioma 
+  changeLangugeToEnglish(): void {
+    this.translate.use('en');
+    console.log('Idioma inglés');
+  }
 }

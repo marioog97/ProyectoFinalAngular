@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{ MsjBienvenidaService } from '../servicio/msj-bienvenida.service';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -8,13 +9,20 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class PrincipalComponent implements OnInit {
 
-  constructor( translate: TranslateService) { 
+  msjBienvenida: any;
+
+  constructor(private bienvenidaService: MsjBienvenidaService, translate: TranslateService) { 
     translate.setDefaultLang('es');
     translate.use('es');
   }
   ngOnInit(): void {
   }
 
- 
+  mensajeBienvenida(){
+    this.bienvenidaService.mensaje().subscribe({
+      next: (r) => this.msjBienvenida = r,
+      error: (e) => console.log(JSON.stringify(e))
+    });
+  }
 
 }
